@@ -3,7 +3,7 @@
 
 Rework of the car found at https://www.ebay.com/itm/Mini-DIY-Wind-Powered-Robot-Toy-Car-Kit-130-Brush-Educational-Gadget-Hobby-Gift/142994655813?ssPageName=STRK%3AMEBIDX%3AIT&_trksid=p2057872.m2749.l2649
 
-The file Motorhalterung_S130.stl  - Motorhalterung Größe 130 (Size 130 DC motor mounting bracket) is created by Mardor and is licensed under the Creative Commons - Attribution license.  Download link:  https://www.thingiverse.com/thing:2748224
+The file OpenSCAD/Motorhalterung_S130.stl  - Motorhalterung Größe 130 (Size 130 DC motor mounting bracket) is created by Mardor and is licensed under the Creative Commons - Attribution license.  Download link:  https://www.thingiverse.com/thing:2748224
 
 
 
