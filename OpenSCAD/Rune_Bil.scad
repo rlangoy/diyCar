@@ -3,21 +3,45 @@ $fn=36;
 //translate([0,80-14,0])cube([14,14,14]);
 
 
-    difference(){  
-    {
     chasie();
     // Add akslinger
-    //translate([0,-3,1.75+.75]){ akser();}
-    //translate([0,-9,1.75+.75]){ akser();}
-
+    translate([0,-3,1.75+.75]){ akser();}
+    translate([0,-9,1.75+.75]){ akser();}
 
     ///translate([5,-3,5.75]){ pegTop();}
 
     translate([55/2+23/2,80,1]) feetMount();
-    }
-    cube([80,62,10]);
+
+//Switch pegs
+rotate(a=[0,0,90]) { union(){translate([40,-5,1]) swithPeg();} }
+
+/*
+union()
+{
+rotate(a=[0,0,0]) translate([40,-5,1]) translate([-6.5/2,-3/2,0]) cube([6.5,3,7]);
+}*/
+
+module swithPeg()
+{
+  translate([-7.5,0,0]) { pegDia1mm(); }
+  translate([ 7.5,0,0]) { pegDia1mm(); }
+  
 }
-translate([55/2+23/2,80,1]) feetMount();
+
+module pegDia1mm()
+{
+    difference()
+    {
+        union()
+         { translate([0,0,.4])   {  cylinder(r1=1.05,r2=0.90,h=1);}
+           translate([0,0,.5*2]) {  cylinder(r1=1.10,r2=0.85,h=1);}
+           translate([0,0,.5*3]) {  cylinder(r1=1.15,r2=0.80,h=1.5);}
+           translate([0,0,0])    {  cylinder(r1=1.00,r2=0.85,h=3);} 
+         }   
+        translate([-1.5,-.25,0])   { cube([3,.5,3]); }
+    }
+}
+
 module feetMount()
 {
     rotate(a=[-90,0,180])
@@ -46,6 +70,14 @@ module chasie()
 {
 difference(){
 cube([55,80,1]);  // Chassie
+
+//SwitchNob hole
+translate([5,40,0]) translate([-1.5,-6.5/2,0])cube([3,6.5,3]);
+
+
+ translate([17,15,0]){  
+ cube([20,42,5]);}  //ytre boks
+
 
 //holes axis 1
 translate([55/2,5,0]) {cylinder(h=1.25,r=1);}
