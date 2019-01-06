@@ -1,3 +1,8 @@
+//
+//  Windows move the file Motorhalterung_S130.stl to D:/Downloads or fix
+//  import("D:/Downloads/Motorhalterung_S130.stl");
+//  
+
 
 $fn=36;
 
@@ -65,7 +70,11 @@ module MotorHolder()
 {
 difference(){
 translate([0,-15.5,0]){
+//import($HOME+ "\\Motorhalterung_S130.stl");
+//import("Motorhalterung_S130.stl");
+//FIX: Windows trouble
 import("D:/Downloads/Motorhalterung_S130.stl");
+
 }
 translate([-5,-5,-50]){ cube(50,40,30);}
 }
