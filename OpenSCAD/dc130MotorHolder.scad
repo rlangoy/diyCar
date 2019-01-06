@@ -7,7 +7,7 @@
 $fn=36;
 
 MotorHolder3(); 
-rotate(a=[180,0,0])feetMount();
+//rotate(a=[180,0,0])feetMount();
 
 module feetMount()
 {
