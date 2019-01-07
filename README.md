@@ -7,7 +7,7 @@
      <img src="https://github.com/rlangoy/diyCar/blob/master/Images/Car_Front.jpg" width="200 "  />       
    </div>     
    <div class="column">
-     <img src="https://github.com/rlangoy/diyCar/blob/master/Images/Car-Side.jpg" width="200"  />      
+     <img src="https://github.com/rlangoy/diyCar/blob/master/Images/Car-Side.jpg" width="300"  />      
   </div>      
 </div>
 
