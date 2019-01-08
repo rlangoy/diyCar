@@ -5,8 +5,17 @@ $fn=36;
 
     chasie();
     // Add akslinger
-    translate([0,-3,1.75+.75]){ akser();}
-    translate([0,-9,1.75+.75]){ akser();}
+    translate([0,-3,1.75+.75]){ nyAkser();}
+    translate([15+1,-3,1.75+.75]){ nyAkser();}
+    translate([15*2+2,-3,1.75+.75]){ nyAkser();}
+    translate([0,-9,1.75+.75]){ nyAkser();}
+
+
+    //Old stuf
+    //translate([0,-3,1.75+.75]){ akser();}
+    //translate([0,-9,1.75+.75]){ akser();}
+
+
 
     ///translate([5,-3,5.75]){ pegTop();}
 
@@ -79,16 +88,26 @@ translate([5,40,0]) translate([-1.5,-6.5/2,0])cube([3,6.5,3]);
  cube([20,42,5]);}  //ytre boks
 
 
-//holes axis 1
-translate([55/2,5,0]) {cylinder(h=1.25,r=1);}
+//holes front axis
 translate([5,5,0]) {cylinder(h=1.25,r=1);}
+translate([5+5,5,0]) {cylinder(h=1.25,r=1);}
+
 translate([50,5,0]) {cylinder(h=1.25,r=1);}
+translate([50-5,5,0]) {cylinder(h=1.25,r=1);}
+
+//front plate - whole
+translate([55/2-2.5,5,0]) {cylinder(h=1.25,r=1);}
+translate([55/2+2.5,5,0]) {cylinder(h=1.25,r=1);}
+
 
 //holes axis 2
 
-translate([55/2,75,0]) {cylinder(h=1.25,r=1);}
+//translate([55/2,75,0]) {cylinder(h=1.25,r=1);}
 translate([5,75,0]) {cylinder(h=1.25,r=1);}
+translate([5+5,75,0]) {cylinder(h=1.25,r=1);}
+
 translate([50,75,0]) {cylinder(h=1.25,r=1);}
+translate([50-5,75,0]) {cylinder(h=1.25,r=1);}
 }
 
 //Batteri boks
@@ -104,7 +123,7 @@ difference(){
 
 module pegTop()
 {
-    cylinder(h=1.5,r=1);
+    cylinder(h=1.5,r1=.94,r2=1);
     translate([0,0,1.35])
     {
         difference()
@@ -114,6 +133,22 @@ module pegTop()
          }
     
     }
+}
+
+
+module nyAkser()
+{
+   
+rotate(a=90,v=[0,1,0]){
+    difference(){
+    translate([-2.5,-2.5,0.0]) { cube([5,5,15]);}
+    //cylinder(h=55, r=2.5, center=false);
+    cylinder(h=55, r=1.5,$fn=60, center=false);
+    }
+}
+    translate([5,0,2.5])   {pegTop();}
+    translate([5+5,0,2.5])   {pegTop();}
+
 }
 
 
